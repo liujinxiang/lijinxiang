@@ -1,0 +1,105 @@
+﻿
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+ <link rel="stylesheet" href="WEB\work\css/style.css" media="screen" type="text/css" />
+<title>basic infomation</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a{text-decoration:none;outline:none;}
+html,body{font:12px/23px \u5B8B\u4F53;background: #e4e8ec;}
+.clearfix:after{content: " ";display:block;clear: both;height: 0;line-height: 0;visibility: hidden;}
+.clearfix{display: inline-block;}
+.clearfix{display: block;}
+/* warp */
+.warp{width: 980px;margin: 0 auto;padding:35px 0 40px;}
+</style>
+
+<link href="WEB\work\css/page.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="WEB\work\js/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var f_main_nav=$("#f_main_nav");
+    var f_main_con=$("#f_main_con");
+
+    f_main_nav.find("li").each(function(index){
+        $(this).click(function(){
+            if(f_main_con.find("li").eq(index).css("display")=="none"){
+                f_main_con.find("li").fadeOut("fast").eq(index).fadeIn("fast");
+                f_main_nav.find("span").fadeOut("fast").eq(index).fadeIn("fast");
+            }else{
+            	f_main_con.find("li").fadeOut("fast").eq(index).fadeOut("fast");
+                f_main_nav.find("span").fadeOut("fast").eq(index).fadeOut("fast");
+            }
+        });
+    });
+    f_main_con.find("a").click(function(){
+        $(this).parent().fadeOut("fast");
+        f_main_nav.find("span").fadeOut("fast");
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+<div class="col-md-12 col-xs-12">
+									<div class='all'>
+									<div>&nbsp;</div>
+									<div>&nbsp;</div>
+									<div>&nbsp;</div>
+        
+<div class="warp">
+
+	<div id="f_main_nav" class="f_main_nav">
+		<ul class="clearfix">
+			<li class="fm1">
+				<p class="fm_info">内向</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm2">
+				<p class="fm_info">成绩还可以</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm3">
+				<p class="fm_info">喜欢运动</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm4">
+				<p class="fm_info">探险</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm5">
+				<p class="fm_info">恐怖故事</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm6">
+				<p class="fm_info">收获</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm7">
+				<p class="fm_info">期待</p>
+				<span>&nbsp;</span>
+			</li>
+			<li class="fm8">
+				<p class="fm_info">改掉坏毛病</p>
+				<span>&nbsp;</span>
+			</li>
+		</ul>
+	</div>
+	
+
+</div>
+
+</body>
+</html>
